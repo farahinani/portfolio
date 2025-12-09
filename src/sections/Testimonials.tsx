@@ -58,7 +58,7 @@ export const TestimonialsSection = () => {
               // <div key={testimonial.name} className="bg-gray-800 rounded-3xl p-6 relative overflow-hidden z-0"
               // >
 
-              <Card key={testimonial.name} className="max-w-xs md:max-w-md md:p-8">
+              <Card key={testimonial.name} className="max-w-xs md:max-w-md p-6 md:p-8">
                 {/* <div className="absolute inset-0 opacity-5 -z-10"
                 style={{
                   backgroundImage: `url(${grainImage.src})`
