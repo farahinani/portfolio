@@ -1,26 +1,26 @@
 /* eslint-disable react/jsx-key */
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
+// import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
+import marloWebsite from "@/assets/images/marlo-website-portfolio.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Marlo Bespoke",
+    year: "2023",
+    title: "Marlo Bespoke website",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "WordPress site featuring GSAP animations." },
+      { title: "Designed with a fully responsive layout." },
+      { title: "Implementation based on provided design" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://www.marlobespoke.com/",
+    image: marloWebsite,
   },
   {
     company: "Innovative Co",
@@ -46,22 +46,25 @@ const portfolioProjects = [
     link: "https://youtu.be/Z7I5uSRHMHg",
     image: aiStartupLandingPage,
   },
+  
+  
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section id="projects" className="pb-16 lg:py-24">
       <div className="container">
-        <SectionHeader 
+        <SectionHeader
           header="Real-World Results"
           title="Featured Projects"
-          description="See how i transformed concepts into engaging digital experiences"
+          // description="See how i transformed concepts into engaging digital experiences"
+          description="Discover the transformation of ideas into polished digital experiences."
         />
 
         {/* card wrapper */}
         <div className="mt-10 md:mt-20 flex flex-col gap-20">
           {portfolioProjects.map((project, projectIndex) => (
-            <Card 
+            <Card
               key={project.title}
               className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky" style={{
                 top: `calc(64px + ${projectIndex * 40}px)`
@@ -76,7 +79,7 @@ export const ProjectsSection = () => {
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 {/* --[lg] 1st column */}
                 <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
+                  <div className="bg-gradient-to-r from-fuchsia-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
                     <span>{project.company}</span>
                     <span>&bull;</span>
                     <span>{project.year}</span>
@@ -94,7 +97,7 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+                  <a href={project.link} target="_blank">
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex justify-center items-center gap-2 mt-8">
                       <span>Visit Live Site</span>
                       <ArrowUpRightIcon className="size-4" />
@@ -111,5 +114,5 @@ export const ProjectsSection = () => {
         </div>
       </div>
     </section>
-  ) 
+  )
 };
