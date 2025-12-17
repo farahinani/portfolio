@@ -1,7 +1,6 @@
 "use client";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import bookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
@@ -9,14 +8,14 @@ import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
-import mapImage from "@/assets/images/map.png";
-import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
-import { ToolboxItems } from "@/components/ToolboxItems";
-import { motion } from "framer-motion";
 import { useRef } from "react";
-import marloWebsite from "@/assets/images/marlo-website-portfolio.png";
+import chatbotWebsite from "@/assets/images/chatbot-landing-page.png";
+import youtubeWebsite from "@/assets/images/youtube-landing-page.png";
+import ecommerceWebsite from "@/assets/images/ecommerce-landing-page.png";
+import mohitoWebsite from "@/assets/images/mohito-landing-page.png";
 import { OverlayHover } from "@/components/OverlayHover";
+
 
 
 const toolboxItems = [
@@ -117,7 +116,7 @@ export const PersonalProject = () => {
                 <CardHeader title="Mohito" description="Mohito is a an interactive website built with React and GSAP to showcase smooth animations and modern UI." />
                 {/* image */}
                 <div className="w-60 md:w-72 lg:w-96 mx-auto mt-2 md:mt-0">
-                  <Image src={marloWebsite} alt="Book cover" />
+                  <Image src={mohitoWebsite} alt="Marlo cover" />
                 </div>
 
               </div>
@@ -134,12 +133,12 @@ export const PersonalProject = () => {
                 <CardHeader title="Ecommerce" description="An e-commerce website built with React & backend integration. Deployed on AWS (free tier)." />
                 {/* image */}
                 <div className="w-60 md:w-72 lg:w-96 mx-auto mt-2 md:mt-0">
-                  <Image src={marloWebsite} alt="Book cover" />
+                  <Image src={ecommerceWebsite} alt="Ecommerce cover" />
                 </div>
               </div>
 
               {/* overlay hover */}
-              <OverlayHover href="https://youtube.com" />
+              <OverlayHover href="http://ecommerce-project-react-env.eba-hwmb8hwn.ap-southeast-5.elasticbeanstalk.com/" />
             </Card>
 
           </div>
@@ -153,22 +152,22 @@ export const PersonalProject = () => {
                 <CardHeader title="ChatBot" description="A simple chatbot built with React and an external library, implemented entirely on the frontend." />
                 {/* image */}
                 <div className="w-60 md:w-72 lg:w-96 mx-auto mt-2 md:mt-0">
-                  <Image src={marloWebsite} alt="Book cover" />
+                  <Image src={chatbotWebsite} alt="Chatbot cover" />
                 </div>
               </div>
 
               {/* overlay hover */}
-              <OverlayHover href="https://youtube.com" />
+              <OverlayHover href="https://farahinani.github.io/chatbot-project/" />
             </Card>
 
             {/* ----- 4th card [map image]----- */}
             <Card className="h-[320px] md:h-[350px] md:col-span-3 animate-fade-up">
               {/* title */}
               <div className="transition-all duration-300 hover:blur-sm">
-                <CardHeader title="Youtube" description="An interactive YouTube UI mockup built with HTML and JavaScript." />
+                <CardHeader title="Youtube" description="A responsive YouTube UI mockup built using pure HTML and CSS, focusing on layout structure" />
                 {/* image */}
                 <div className="w-60 md:w-72 lg:w-96 mx-auto mt-2 md:mt-0">
-                  <Image src={marloWebsite} alt="Book cover" />
+                  <Image src={youtubeWebsite} alt="Mohito cover" />
                 </div>
               </div>
 
