@@ -2,12 +2,6 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import Image from "next/image";
-import JavascriptIcon from "@/assets/icons/square-js.svg";
-import HTMLIcon from "@/assets/icons/html5.svg";
-import CssIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
-import GithubIcon from "@/assets/icons/github.svg";
 import { CardHeader } from "@/components/CardHeader";
 import { useRef } from "react";
 import chatbotWebsite from "@/assets/images/chatbot-landing-page.png";
@@ -15,80 +9,6 @@ import youtubeWebsite from "@/assets/images/youtube-landing-page.png";
 import ecommerceWebsite from "@/assets/images/ecommerce-landing-page.png";
 import mohitoWebsite from "@/assets/images/mohito-landing-page.png";
 import { OverlayHover } from "@/components/OverlayHover";
-
-
-
-const toolboxItems = [
-  {
-    title: 'Javascript',
-    iconType: JavascriptIcon
-  },
-  {
-    title: 'HTML5',
-    iconType: HTMLIcon
-  },
-  {
-    title: 'CSS3',
-    iconType: CssIcon
-  },
-  {
-    title: 'React',
-    iconType: ReactIcon
-  },
-  {
-    title: 'Chrome',
-    iconType: ChromeIcon
-  },
-  {
-    title: 'Github',
-    iconType: GithubIcon
-  },
-];
-
-const hobbies = [
-  {
-    title: 'Painting',
-    emoji: '🎨',
-    left: "5%",
-    top: "5%"
-  },
-  {
-    title: 'Travel',
-    emoji: '✈️',
-    left: "50%",
-    top: "5%"
-  },
-  {
-    title: 'Baking',
-    emoji: '🍪',
-    left: "35%",
-    top: "40%"
-  },
-  {
-    title: 'Gaming',
-    emoji: '🎮',
-    left: "10%",
-    top: "35%"
-  },
-  {
-    title: 'Music',
-    emoji: '🎵',
-    left: "70%",
-    top: "45%"
-  },
-  {
-    title: 'Shopping',
-    emoji: '🛍️',
-    left: "5%",
-    top: "65%"
-  },
-  {
-    title: 'Reading',
-    emoji: '📚',
-    left: "45%",
-    top: "70%"
-  }
-]
 
 export const PersonalProject = () => {
 

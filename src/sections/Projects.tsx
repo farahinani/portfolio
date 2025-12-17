@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-key */
 // import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import marloWebsite from "@/assets/images/marlo-website-portfolio.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import ZespriLandingPage from "@/assets/images/zespri-landing-page.png";
+import tetrapakLandingPage from "@/assets/images/tetrapak-landing-page.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -11,40 +11,44 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Marlo Bespoke",
+    company: "Small Industrie Studio PTE LTD",
     year: "2023",
-    title: "Marlo Bespoke website",
+    title: "Marlo Bespoke",
     results: [
       { title: "WordPress site featuring GSAP animations." },
       { title: "Designed with a fully responsive layout." },
       { title: "Implementation based on provided design" },
+      { title: "Delivered as part of SmallIndustrie Studio."}
     ],
     link: "https://www.marlobespoke.com/",
     image: marloWebsite,
   },
   {
-    company: "Innovative Co",
+    company: "Small Industrie Studio PTE LTD",
     year: "2021",
-    title: "Light Saas Landing Page",
+    title: "Zespri Landing Blog",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Updated Zespri website content using Adobe Experience Manager (AEM)" },
+      { title: "Implemented page update & changes based on client requirements" },
+      { title: "Ensured accuracy, responsiveness, & brand consistency across pages" },
+      { title: "Work completed as part of a team at SmallIndustrie Studio."}
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://www.zespri.com/en-SG/blogdetail/organic-kiwifruit",
+    image: ZespriLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Small Industrie Studio PTE LTD",
+    year: "2020",
+    title: "Tetra Pak Campaign",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Develop Tetra Pak campaign website using AEM" },
+      { title: "Implemented frontend updates and content changes" },
+      { title: "Maintained responsive and brand-consistent UI" },
+      { title: "Delivered as part of SmallIndustrie Studio."}
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://www.tetrapak.com/en-sg/campaigns/food-solutions/prepared-food-processing",
+    // https://www.tetrapak.com/en-sg/campaigns/services-apac
+    image: tetrapakLandingPage,
   },
   
   
