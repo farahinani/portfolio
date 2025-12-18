@@ -1,5 +1,16 @@
 export const dynamic = 'force-static'
-import HomeClient from "@/app/HomeClient"
+import HomeClient from "@/app/HomeClient";
+
+
+export default function Home() {
+  return (
+    <>
+    <HomeClient />
+
+    <p>TEST MARKER</p>
+    </>
+  )
+}
 
 // import { AboutSection } from "@/sections/About";
 // import { Header } from "@/sections/Header";
@@ -38,7 +49,3 @@ import HomeClient from "@/app/HomeClient"
 //   )
 // }
 
-
-export default function Home() {
-  return <HomeClient />
-}

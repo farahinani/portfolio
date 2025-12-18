@@ -23,8 +23,6 @@ export default function Home() {
       <ContactSection />
       <Footer />
 
-      <p>DEPLOY TEST 19 DEC 2025</p>
-
     </div>
   );
 }
