@@ -3,8 +3,10 @@
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import grainImage from '@/assets/images/grain.jpg';
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export const ContactSection = () => {
+
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -17,32 +19,54 @@ export const ContactSection = () => {
 
     const formData = new FormData(form);
 
-    const data = {
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      message: formData.get("message") as string,
-    };
+    // const data = {
+    //   name: formData.get("name") as string,
+    //   email: formData.get("email") as string,
+    //   message: formData.get("message") as string,
+    // };
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    // const res = await fetch("/api/contact", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(data),
+    // });
 
-    setLoading(false);
+    // setLoading(false);
 
     // if (res.ok) {
-    //   setSuccess(true);
-    //   e.currentTarget.reset();
+    //   form.reset();      // ✅ reset dulu
+    //   setSuccess(true);  // baru tukar UI
+
+    //   setTimeout(() => {
+    //     setOpen(false);   // close modal
+    //     setSuccess(false); // reset state untuk next open
+    //   }, 2000);
     // }
-    if (res.ok) {
-      form.reset();      // ✅ reset dulu
-      setSuccess(true);  // baru tukar UI
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          name: formData.get("name") as string,
+          email: formData.get("email") as string,
+          message: formData.get("message") as string,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      form.reset();
+      setSuccess(true);
 
       setTimeout(() => {
-        setOpen(false);   // close modal
-        setSuccess(false); // reset state untuk next open
+        setOpen(false);
+        setSuccess(false);
       }, 2000);
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      alert("Failed to send message");
+    } finally {
+      setLoading(false);
     }
 
   }
@@ -92,8 +116,8 @@ export const ContactSection = () => {
 
                     {success ? (
                       <>
-                      <p className="text-green-600">Message sent successfully!</p>
-                      <p>Thank you for your message. I’ll get back to you shortly.</p>
+                        <p className="text-green-600">Message sent successfully!</p>
+                        <p>Thank you for your message. I’ll get back to you shortly.</p>
                       </>
                     ) : (
                       <form onSubmit={handleSubmit} className="space-y-4">
