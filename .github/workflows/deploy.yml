@@ -3,33 +3,26 @@ name: Auto Deploy to Hostinger
 on:
   push:
     branches:
-      - main  # bila push branch main, auto deploy
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repo
       - uses: actions/checkout@v4
-
-      # 2. Setup Node.js
       - uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      # 3. Install dependencies
       - run: npm ci
-
-      # 4. Build Next.js (static export)
       - run: npm run build
 
-      # 5. Deploy ke Hostinger via FTP
       - uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: out/
-          server-dir: public_html/  # WAJIB ada slash
-          delete: false             # elak error delete folder lama
+          server-dir: public_html/
+          dangerous-clean-slate: true
