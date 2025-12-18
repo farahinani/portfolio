@@ -29,6 +29,9 @@ jobs:
         run: |
           npm run build
 
+      - name: DEBUG - list out
+        run: ls -la out || echo "X out folder not found"
+
       # Upload hasil build ke Hostinger
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
