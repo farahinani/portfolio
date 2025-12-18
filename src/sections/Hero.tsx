@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+// hero section
 import memojiImage from "@/assets/images/farah-memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from '@/assets/icons/arrow-down.svg';
