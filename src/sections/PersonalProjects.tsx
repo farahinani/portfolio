@@ -15,7 +15,7 @@ export const PersonalProject = () => {
   const constrainref = useRef(null);
 
   return (
-    <div id="about" className="py-20 lg:py-28">
+    <div className="py-20 lg:py-28">
       <div className="container">
 
         <SectionHeader
