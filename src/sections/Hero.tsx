@@ -85,7 +85,7 @@ export const HeroSection = () => {
             </div>
 
             <div className="text-sm font-medium">
-              Available for new projectssssssssss
+              Available for new project lalala
             </div>
           </div>
 
