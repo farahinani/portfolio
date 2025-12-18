@@ -1,16 +1,16 @@
-name: Deploy to Hostinger
+name: Auto Deploy to Hostinger
 
 on:
   push:
     branches:
-      - main
+      - main  # tukar ikut branch kau
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -19,17 +19,21 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build project
-        run: npm run build
+      - name: Build & Export Next.js
+        run: npm run export
 
-      - name: Deploy via FTP
+      - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./out/
-          server-dir: /public_html/
+          local-dir: out/
+          server-dir: ${{ secrets.FTP_PATH }}/
           protocol: ftp
+          dry-run: false
+          log-level: verbose
+          retries: 3
+          retry-wait: 10
