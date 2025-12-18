@@ -1,4 +1,6 @@
 export const dynamic = 'force-static'
+import HomeClient from "@/app/HomeClient"
+
 // import { AboutSection } from "@/sections/About";
 // import { Header } from "@/sections/Header";
 // import { HeroSection } from "@/sections/Hero";
@@ -25,11 +27,18 @@ export const dynamic = 'force-static'
 //     </div>
 //   );
 // }
+
+
+// export default function Home() {
+//   return (
+//     <div>
+//       <h1>STATIC TEST</h1>
+//       <p>DEPLOY TEST 19 DEC 2025</p>
+//     </div>
+//   )
+// }
+
+
 export default function Home() {
-  return (
-    <div>
-      <h1>STATIC TEST</h1>
-      <p>DEPLOY TEST 19 DEC 2025</p>
-    </div>
-  )
+  return <HomeClient />
 }
