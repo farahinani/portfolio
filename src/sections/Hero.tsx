@@ -93,7 +93,7 @@ export const HeroSection = () => {
             <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
               {/* tracking-wide : utility class that increases the letter spacing of text to 0.025em. This adds a little more space between characters than the default tracking-normal */}
               {/* Building Exceptional User Experiences */}
-              Crafting Exceptional User Experiences
+              Crafting Exceptional User Experiencesssss
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
               {/* I specialize in transforming designs into functional, high-performing web applications. Let's discuss your next project. */}
