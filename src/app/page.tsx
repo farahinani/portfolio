@@ -1,3 +1,4 @@
+export const dynamic = 'force-static'
 import { AboutSection } from "@/sections/About";
 import { Header } from "@/sections/Header";
 import { HeroSection } from "@/sections/Hero";
@@ -20,6 +21,11 @@ export default function Home() {
       <AboutSection />
       <ContactSection />
       <Footer />
+
+      {/* TEST MARKER */}
+      <p id="deploy-test">
+        DEPLOY TEST 19 DEC 2025
+      </p>
     </div>
   );
 }
