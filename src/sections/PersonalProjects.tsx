@@ -42,7 +42,7 @@ export const PersonalProject = () => {
               </div>
 
               {/* overlay hover */}
-              <OverlayHover href="https://example.com" />
+              <OverlayHover href="mohito.farahinani.com" />
 
             </Card>
 
@@ -92,7 +92,7 @@ export const PersonalProject = () => {
               </div>
 
               {/* overlay hover */}
-              <OverlayHover href="https://youtube.com" />
+              <OverlayHover href="https://youtubemock.farahinani.com/" />
             </Card>
           </div>
         </div>
