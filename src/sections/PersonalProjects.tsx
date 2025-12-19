@@ -42,7 +42,7 @@ export const PersonalProject = () => {
               </div>
 
               {/* overlay hover */}
-              <OverlayHover href="mohito.farahinani.com" />
+              <OverlayHover href="https://mohito.farahinani.com" />
 
             </Card>
 
