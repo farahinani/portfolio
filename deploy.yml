@@ -1,0 +1,48 @@
+name: Deploy Next.js Static to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Ambil code dari repo
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Pasang Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Build dan export Next.js ke static site
+      - name: Build and export
+        run: |
+          npm run build
+
+      - name: DEBUG - list out
+        run: ls -la out || echo "X out folder not found"
+
+      # Upload hasil build ke Hostinger
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: out/
+          server-dir: ./
+          dangerous-clean-slate: false
+          exclude: |
+            **/ .git*
+            **/ .github/**
+
