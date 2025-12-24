@@ -8,6 +8,10 @@ const footerLinks = [
   {
     title: 'Github',
     href: 'https://github.com/farahinani',
+  },
+  {
+    title: 'Upwork',
+    href: 'https://www.upwork.com/freelancers/~0148f1095e8db0faa1?mp_source=share',
   }
 ]
 

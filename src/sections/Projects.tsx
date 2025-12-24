@@ -26,7 +26,7 @@ const portfolioProjects = [
   {
     company: "Small Industrie Studio PTE LTD",
     year: "2021",
-    title: "Zespri Landing Blog",
+    title: "Zespri Blog",
     results: [
       { title: "Updated Zespri website content using Adobe Experience Manager (AEM)" },
       { title: "Implemented page update & changes based on client requirements" },
